@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import GitHubSection from './components/GitHubSection';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,6 +51,7 @@ function App() {
           <Skills />
           <Projects />
           <Resume />
+          <GitHubSection/>
           <Contact />
         </main>
         <Footer />

@@ -35,7 +35,7 @@ const Resume = () => {
     {
       role: " Software Developer",
       company: " Quality Edge Services Pvt. Ltd.",
-      period: "March 2025 - Present",
+      period: "March 2025 - Jun 2025",
       
       achievements: [
         " Spearheaded end-to-end product development by independently designing intuitive UI/UX, building responsive frontends with React.js and Tailwind CSS, and implementing robust backend systems with Node.js and MongoDB.",
@@ -142,7 +142,7 @@ const Resume = () => {
           </p>
           
           <a 
-            href="https://drive.google.com/file/d/1SjucS6lcu1kBPCYJ4Ycc_KNPGSQwz-g6/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Gu2kSaGE_mb4aRMahKAudvDTLyyc8Z4L/view?usp=sharing"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-on-scroll opacity-0"
             target="_blank" 
             style={{ animationDelay: '0.4s' }}

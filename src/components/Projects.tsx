@@ -20,68 +20,153 @@ const Projects = () => {
   
   useEffect(() => {
     // Simulating project data - in a real app, this could come from an API
-    const projectData: Project[] = [
-      {
-        id: 1,
-        title: "NovelNest - A Second Hand Book Platform",
-        description: "A full-stack e-commerce platform built with React.js, Node.js, and MongoDB for buying and selling first-hand and second-hand books. Features include robust user authentication, comprehensive product listing management, seamless cart functionality, secure payment processing, and a tailored experience for both shopkeepers and consumers.",
-        image: "https://plus.unsplash.com/premium_photo-1667251758769-398dca4d5f1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b25saW5lJTIwc2Vjb25kJTIwaGFuZCUyMGJvb2t8ZW58MHx8MHx8fDA%3D",
-        tags: ["React", "Node.js", "MongoDB", "Express", "Fullstack", "Frontend", "Backend", "Stripe", "Tailwind CSS", "Cloudinary"],
-        demoLink: "https://online-second-hand-book.vercel.app/",
-        githubLink: "https://github.com/aaradhayasingh811/OnlineSecondHandBook",
-        featured: true
-      },
-      {
-        id: 2,
-        title: "Wildlife Sanctuary Api",
-        description: "The Wildlife Sanctuary API is a comprehensive system designed to facilitate the management, monitoring, and engagement of activities within a wildlife sanctuary. It provides structured endpoints for various stakeholders, including staff, researchers, volunteers, and visitors, ensuring seamless interaction with the sanctuary’s digital ecosystem.",
-        image: "https://plus.unsplash.com/premium_photo-1661832611972-b6ee1aba3581?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZGxpZmUlMjBzYW50dWFyeXxlbnwwfHwwfHx8MA%3D%3D",
-        tags: ["Nodejs", "ExpressJs", "MongoDb", "Backend", "RestfulAPI"],
-        demoLink: "https://wildlife-sanctuary-api.onrender.com/api/v1",
-        githubLink: "https://github.com/aaradhayasingh811/WildLife_Sanctuary_Api",
-        featured: true
-      },
-      {
-        id: 3,
-        title: "Smart AI Trip Planner",
-        description: "Developed an AI-driven travel planning application using OpenAI API to personalize trip plans for users.",
-        image: "https://images.unsplash.com/photo-1673515336319-20a3ea59c228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyaXAlMjBwbGFubmVyfGVufDB8fDB8fHww",
-        tags: [" React.js", "Tailwind CSS", "OpenAI API", "Node.js", "MongoDB", "Express.js","Fullstack", "Frontend", "Backend"],
-        demoLink: "https://smarttripplannerbyaaru.netlify.app/",
-        githubLink: "https://github.com/aaradhayasingh811/frontend_smart_trip_planner",
-        featured: false
-      },
-      {
-        id: 4,
-        title: "Dynamo Dashboard",
-        description: "Dynamo Dashboard ,A modern, responsive frontend for Dynamo, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tags: [ "TailwindCSS", "Reactjs", "Frontend"],
-        demoLink: "https://first-benchfrontend.vercel.app/",
-        githubLink: "https://github.com/aaradhayasingh811/First_Bench_frontend",
-        featured: false
-      },
-      {
-        id: 5,
-        title: "Computer Engineering Society Website",
-        description: "A responsive website for the Computer Engineering Society of MMMUT, Gorakhpur. Built with HTML, CSS, and JavaScript, it features a modern design and user-friendly navigation.",
-        image: "https://plus.unsplash.com/premium_photo-1726754457459-d2dfa2e3a434?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tcHV0ZXIlMjBlbmdpbmVlcmluZyUyMHNjb2V0eXxlbnwwfHwwfHx8MA%3D%3D",
-        tags: ["HTML", "CSS","Javascript", "Frontend"],
-        demoLink: "https://cesmmmut.netlify.app/",
-        githubLink: "https://github.com/aaradhayasingh811/ces-official-draft",
-        featured: true
-      },
-      {
-        id: 6,
-        title: "InstaClone",
-        description: "Built a responsive Instagram clone using HTML and CSS. The project showcases a modern design and user-friendly interface, mimicking the core features of Instagram.",
-        image:"https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww",
-        tags: ["HTML", "CSS", "Frontend"],
-        demoLink: "https://aaradhayasingh811.github.io/instagram-clone/",
-        githubLink: "https://github.com/aaradhayasingh811/instagram-clone",
-        featured: false
-      }
-    ];
+    // const projectData: Project[] = [
+    //   {
+    //     id: 1,
+    //     title: "NovelNest - A Second Hand Book Platform",
+    //     description: "A full-stack e-commerce platform built with React.js, Node.js, and MongoDB for buying and selling first-hand and second-hand books. Features include robust user authentication, comprehensive product listing management, seamless cart functionality, secure payment processing, and a tailored experience for both shopkeepers and consumers.",
+    //     image: "https://plus.unsplash.com/premium_photo-1667251758769-398dca4d5f1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b25saW5lJTIwc2Vjb25kJTIwaGFuZCUyMGJvb2t8ZW58MHx8MHx8fDA%3D",
+    //     tags: ["React", "Node.js", "MongoDB", "Express", "Fullstack", "Frontend", "Backend", "Stripe", "Tailwind CSS", "Cloudinary"],
+    //     demoLink: "https://online-second-hand-book.vercel.app/",
+    //     githubLink: "https://github.com/aaradhayasingh811/OnlineSecondHandBook",
+    //     featured: true
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Wildlife Sanctuary Api",
+    //     description: "The Wildlife Sanctuary API is a comprehensive system designed to facilitate the management, monitoring, and engagement of activities within a wildlife sanctuary. It provides structured endpoints for various stakeholders, including staff, researchers, volunteers, and visitors, ensuring seamless interaction with the sanctuary’s digital ecosystem.",
+    //     image: "https://plus.unsplash.com/premium_photo-1661832611972-b6ee1aba3581?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZGxpZmUlMjBzYW50dWFyeXxlbnwwfHwwfHx8MA%3D%3D",
+    //     tags: ["Nodejs", "ExpressJs", "MongoDb", "Backend", "RestfulAPI"],
+    //     demoLink: "https://wildlife-sanctuary-api.onrender.com/api/v1",
+    //     githubLink: "https://github.com/aaradhayasingh811/WildLife_Sanctuary_Api",
+    //     featured: true
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Smart AI Trip Planner",
+    //     description: "Developed an AI-driven travel planning application using OpenAI API to personalize trip plans for users.",
+    //     image: "https://images.unsplash.com/photo-1673515336319-20a3ea59c228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyaXAlMjBwbGFubmVyfGVufDB8fDB8fHww",
+    //     tags: [" React.js", "Tailwind CSS", "OpenAI API", "Node.js", "MongoDB", "Express.js","Fullstack", "Frontend", "Backend"],
+    //     demoLink: "https://smarttripplannerbyaaru.netlify.app/",
+    //     githubLink: "https://github.com/aaradhayasingh811/frontend_smart_trip_planner",
+    //     featured: false
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Dynamo Dashboard",
+    //     description: "Dynamo Dashboard ,A modern, responsive frontend for Dynamo, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.",
+    //     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     tags: [ "TailwindCSS", "Reactjs", "Frontend"],
+    //     demoLink: "https://first-benchfrontend.vercel.app/",
+    //     githubLink: "https://github.com/aaradhayasingh811/First_Bench_frontend",
+    //     featured: false
+    //   },
+    //   {
+    //     id: 5,
+    //     title: "Computer Engineering Society Website",
+    //     description: "A responsive website for the Computer Engineering Society of MMMUT, Gorakhpur. Built with HTML, CSS, and JavaScript, it features a modern design and user-friendly navigation.",
+    //     image: "https://plus.unsplash.com/premium_photo-1726754457459-d2dfa2e3a434?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tcHV0ZXIlMjBlbmdpbmVlcmluZyUyMHNjb2V0eXxlbnwwfHwwfHx8MA%3D%3D",
+    //     tags: ["HTML", "CSS","Javascript", "Frontend"],
+    //     demoLink: "https://cesmmmut.netlify.app/",
+    //     githubLink: "https://github.com/aaradhayasingh811/ces-official-draft",
+    //     featured: true
+    //   },
+    //   {
+    //     id: 6,
+    //     title: "InstaClone",
+    //     description: "Built a responsive Instagram clone using HTML and CSS. The project showcases a modern design and user-friendly interface, mimicking the core features of Instagram.",
+    //     image:"https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww",
+    //     tags: ["HTML", "CSS", "Frontend"],
+    //     demoLink: "https://aaradhayasingh811.github.io/instagram-clone/",
+    //     githubLink: "https://github.com/aaradhayasingh811/instagram-clone",
+    //     featured: false
+    //   }
+    // ];
+    
+
+const projectData: Project[] = [
+  {
+    id: 1,
+    title: "ArchitechX - 3D Home Design Platform",
+    description: "A full-stack 3D home design platform with AI layout generation, Vastu chatbot, and interactive 3D/2D editor. Features JWT/OAuth-secured microservices (auth, user, layout, export) with API gateway, Docker, and RabbitMQ. Integrates Three.js, React, and MongoDB for real-time rendering and exports (.obj/.glb).",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
+    tags: ["React", "Three.js", "Node.js", "Microservices", "Docker", "RabbitMQ", "JWT", "OAuth", "MongoDB", "Fullstack","Frontend", "Backend"],
+    demoLink: "https://drive.google.com/file/d/1Gu2kSaGE_mb4aRMahKAudvDTLyyc8Z4L/view?usp=sharing", 
+    githubLink: "https://github.com/aaradhayasingh811/ArchitechX",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "StyleWow - Fashion Recommendation Engine",
+    description: "An AI-powered fashion assistant that recommends outfits based on body shape, skin tone, occasion, and budget. Scrapes real-time deals from Amazon/Myntra/Flipkart. Includes a fashion quiz, user dashboard, and mobile-responsive design.",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbiUyMHNob3B8ZW58MHx8MHx8fDA%3D",
+    tags: ["React", "Node.js", "Web Scraping", "AI", "Responsive Design", "MongoDB", "Fullstack","Frontend", "Backend"],
+    demoLink: "https://stylewow.netlify.app/",
+    githubLink: "https://github.com/aaradhayasingh811/StyleWow",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "NovelNest - A Second Hand Book Platform",
+    description: "A full-stack e-commerce platform built with React.js, Node.js, and MongoDB for buying and selling first-hand and second-hand books. Features include robust user authentication, comprehensive product listing management, seamless cart functionality, secure payment processing, and a tailored experience for both shopkeepers and consumers.",
+    image: "https://plus.unsplash.com/premium_photo-1667251758769-398dca4d5f1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b25saW5lJTIwc2Vjb25kJTIwaGFuZCUyMGJvb2t8ZW58MHx8MHx8fDA%3D",
+    tags: ["React", "Node.js", "MongoDB", "Express", "Fullstack", "Frontend", "Backend", "Stripe", "Tailwind CSS", "Cloudinary"],
+    demoLink: "https://online-second-hand-book.vercel.app/",
+    githubLink: "https://github.com/aaradhayasingh811/OnlineSecondHandBook",
+    featured: true
+  },
+  {
+    id: 4,
+    title: "Wildlife Sanctuary API",
+    description: "A REST API for managing wildlife sanctuary operations (donations, ticketing, animal tracking). Features JWT authentication, role-based access control, and AI-driven alerts for poaching/climate risks. Modular microservices deployed on Render.",
+    image: "https://plus.unsplash.com/premium_photo-1661832611972-b6ee1aba3581?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2lsZGxpZmUlMjBzYW50dWFyeXxlbnwwfHwwfHx8MA%3D%3D",
+    tags: ["Nodejs", "ExpressJs", "MongoDb", "Backend", "RestfulAPI"],
+    demoLink: "https://wildlife-sanctuary-api.onrender.com/api/v1",
+    githubLink: "https://github.com/aaradhayasingh811/WildLife_Sanctuary_Api",
+    featured: true
+  },
+  {
+    id: 5,
+    title: "Smart AI Trip Planner",
+    description: "Developed an AI-driven travel planning application using OpenAI API to personalize trip plans for users.",
+    image: "https://images.unsplash.com/photo-1673515336319-20a3ea59c228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyaXAlMjBwbGFubmVyfGVufDB8fDB8fHww",
+    tags: ["React.js", "Tailwind CSS", "OpenAI API", "Node.js", "MongoDB", "Express.js", "Fullstack", "Frontend", "Backend"],
+    demoLink: "https://smarttripplannerbyaaru.netlify.app/",
+    githubLink: "https://github.com/aaradhayasingh811/frontend_smart_trip_planner",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Dynamo Dashboard",
+    description: "A modern, responsive frontend for Dynamo, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["TailwindCSS", "Reactjs", "Frontend"],
+    demoLink: "https://first-benchfrontend.vercel.app/",
+    githubLink: "https://github.com/aaradhayasingh811/First_Bench_frontend",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "Computer Engineering Society Website",
+    description: "A responsive website for the Computer Engineering Society of MMMUT, Gorakhpur. Built with HTML, CSS, and JavaScript, it features a modern design and user-friendly navigation.",
+    image: "https://plus.unsplash.com/premium_photo-1726754457459-d2dfa2e3a434?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tcHV0ZXIlMjBlbmdpbmVlcmluZyUyMHNjb2V0eXxlbnwwfHwwfHx8MA%3D%3D",
+    tags: ["HTML", "CSS", "Javascript", "Frontend"],
+    demoLink: "https://cesmmmut.netlify.app/",
+    githubLink: "https://github.com/aaradhayasingh811/ces-official-draft",
+    featured: true
+  },
+  {
+    id: 8,
+    title: "InstaClone",
+    description: "Built a responsive Instagram clone using HTML and CSS. The project showcases a modern design and user-friendly interface, mimicking the core features of Instagram.",
+    image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww",
+    tags: ["HTML", "CSS", "Frontend"],
+    demoLink: "https://aaradhayasingh811.github.io/instagram-clone/",
+    githubLink: "https://github.com/aaradhayasingh811/instagram-clone",
+    featured: false
+  }
+];
+
     
     setProjects(projectData);
     setFilteredProjects(projectData);
