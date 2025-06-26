@@ -9,6 +9,8 @@ import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GitHubSection from './components/GitHubSection';
+import CodePlayground from './components/CodePlayground'
+import TechDNAHelix from './components/TechDNAHelix';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,7 +51,9 @@ function App() {
           <Hero />
           <About />
           <Skills />
+          {/* <TechDNAHelix/> */}
           <Projects />
+          <CodePlayground/>
           <Resume />
           <GitHubSection/>
           <Contact />
