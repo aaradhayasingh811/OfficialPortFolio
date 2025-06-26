@@ -10,6 +10,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setIsMenuOpen(false); // Close menu when scrolling
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -88,24 +89,27 @@ const Header = () => {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        <div 
-          className={`md:hidden fixed top-[60px] left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-lg py-4 border-t dark:border-gray-800 transition-all duration-300 transform ${
-            isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-          }`}
-        >
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {['about', 'skills', 'projects', 'resume', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 capitalize py-2 transition-all duration-300 hover-lift"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+      {/* Mobile Menu - Moved outside the container div */}
+      <div 
+        className={`md:hidden fixed inset-x-0 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${
+          isMenuOpen 
+            ? 'top-[var(--header-height)] opacity-100 visible' 
+            : 'top-[-100%] opacity-0 invisible'
+        }`}
+        style={{ '--header-height': isScrolled ? '72px' : '88px' } as React.CSSProperties}
+      >
+        <div className="container mx-auto px-4 py-4 flex flex-col space-y-3 border-t dark:border-gray-800">
+          {['about', 'skills', 'projects', 'resume', 'contact'].map((item) => (
+            <button
+              key={item}
+              onClick={() => scrollToSection(item)}
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 capitalize py-2 px-4 text-left transition-all duration-300 hover-lift"
+            >
+              {item}
+            </button>
+          ))}
         </div>
       </div>
     </header>
