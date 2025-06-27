@@ -81,7 +81,7 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, url: "www.linkedin.com/in/aaradhaya-singh-693434257" },
+    { icon: <Linkedin className="w-5 h-5" />, url: "https://www.linkedin.com/in/aaradhaya-singh-693434257" },
     { icon: <Github className="w-5 h-5" />, url: "https://github.com/aaradhayasingh811" },
   ];
 
